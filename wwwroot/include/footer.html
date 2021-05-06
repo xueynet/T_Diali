@@ -1,0 +1,41 @@
+<div class="foot">
+    <div class="foot_c">
+        <div class="foot_c_l fl">
+            <ul>
+                <stl:channels topLevel="0" groupChannel="nav">
+                    <stl:if type="CountOfChannels" operate="GreatThan" value="0">
+                        <stl:yes>
+                            <li>
+                                <h1>{Channel.Title}</h1>
+                                <stl:channels>
+                                    <stl:a>{Channel.Title}</stl:a>
+                                </stl:channels>
+                            </li>
+                        </stl:yes>
+                        <stl:no>
+                            <h1>{Channel.Title}</h1>
+                        </stl:no>
+                    </stl:if>
+                </stl:channels>
+            </ul>
+        </div>
+        <div class="foot_c_r fl">
+            <p>关注公众号</p>
+            <img src="{Stl.SiteUrl}/images/erweima.jpg" />
+        </div>
+    </div>
+</div>
+<div class="foot_bq">
+    <p>Copyright © 2019 长沙岱勒新材料科技股份有限公司 All Rights Reserved.　　<a href="http://beian.miit.gov.cn"
+            target="_blank">湘ICP备16574986号</a></p>
+</div>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6e1531a75581e45cc867263c1636f743";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
