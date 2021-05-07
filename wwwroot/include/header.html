@@ -96,7 +96,7 @@
           <stl:if type="CountOfChannels" operate="GreatThan" value="0">
             <stl:yes>
               <li>
-                <a href="javascript:;" data-sidenav-dropdown-toggle class="active">
+                <stl:a href="javascript:;" data-sidenav-dropdown-toggle class="active">
                   <span class="sidenav-link-title">{Channel.Title}</span>
                   <span class="sidenav-dropdown-icon show" data-sidenav-dropdown-icon>
                     <i class="fa fa-sort-desc" aria-hidden="true"></i>
@@ -104,23 +104,23 @@
                   <span class="sidenav-dropdown-icon" data-sidenav-dropdown-icon>
                     <i class="fa fa-sort-up" aria-hidden="true"></i>
                   </span>
-                </a>
+                </stl:a>
                 <ul class="sidenav-dropdown" data-sidenav-dropdown>
                   <stl:channels>
-                    <li><stl:a>{Channel.Title}</a></li>
+                    <li><stl:a>{Channel.Title}</stl:a></li>
                   </stl:channels>
                 </ul>
               </li>
             </stl:yes>
             <stl:no>
               <li>
-                <stl:a><span class="sidenav-link-title">{Channel.Title}</span></stl:a>
+                  <stl:a><span class="sidenav-link-title">{Channel.Title}</span></stl:a>
               </li>
             </stl:no>
           </stl:if>
         </stl:channels>
-      </ul>
-      </li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <a href="javascript:;" class="wap_nav" id="sidenav-toggle">

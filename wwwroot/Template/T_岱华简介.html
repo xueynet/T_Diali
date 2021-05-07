@@ -29,25 +29,34 @@
 	<script type="text/javascript" src="/skin/js/sidenav.min.js"></script>
 	<script>$('[data-sidenav]').sidenav();</script>
 	<!--二级开始-->
-	<div class="erji_banner" style="background:url(/skin/banner/1.jpg) no-repeat center;"></div>
+	<div class="erji_banner">
+		<stl:image channelName="关于我们"></stl:image>
+	</div>
 	<!--当前位置-->
 	<div class="erji_position">
 		<h3>
 			<p>关于岱勒</p><span>About DIALINE</span>
 		</h3>
 		<ul>
-			<li class='erji_position_li1'><a href='/about/'>岱勒简介</a></li>
-			<li><a href="/dailewenhua/">岱勒文化</a></li>
-
-			<li><a href="/rongyuzizhi/">荣誉资质</a></li>
-
-			<li><a href="/xinxigongkai/">信息公开</a></li>
-
+			<stl:channels channelName='关于我们' scope='children'>
+                <stl:if testType="UpChannelOrSelf">
+                    <stl:yes>
+                        <li class="erji_position_li1">
+                            <stl:a></stl:a>
+                        </li>
+                    </stl:yes>
+                    <stl:no>
+                        <li>
+                            <stl:a></stl:a>
+                        </li>
+                    </stl:no>
+                </stl:if>
+            </stl:channels>
 		</ul>
 		<div class="clear"></div>
 	</div>
 	<div class="about_box1 kuandu">
-		<img src="/skin/images/about_img.jpg" />
+		<img src="{Stl.SiteUrl}/images/about_img.jpg" />
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			长沙岱勒新材料科技股份有限公司成立于2009年，2017年9月于深交所上市（股票代码：300700），是一家专业从事金刚石线研发、生产、销售和服务的高新技术企业，也是国内首家掌握金刚石线核心技术并大规模投入生产的企业和国内领先的金刚石线制造商。公司致力于成为全球一流的硬脆材料加工耗材综合服务商，为晶体硅、蓝宝石、集成电路芯片、视窗系统、光学镜头、精密陶瓷及磁性材料等硬脆材料切割提供专业工具和完整解决方案。<br />
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -1,0 +1,104 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+	<meta name="aplus-terminal" content="1">
+	<meta name="spm-id" content="a2156.1391427">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>岱勒新材</title>
+	<meta name="description" content="岱勒新材专业从事硬脆材料切割工具——电镀金刚石线的研发、制造和应用技术服务,为多晶硅、单晶硅、蓝宝石、磁性材料等超硬材料提供切割工具与解决方案。" />
+	<meta name="keywords" content="岱勒,岱勒新材,岱勒科技股份,金刚石线" />
+	<link href="{Stl.SiteUrl}/css/css.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/jquery-1.8.2.min.js"></script>
+	<!--人力资源-->
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/menu.js"></script>
+	<!--表单必填项-->
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			//验证
+			$('#complain').submit(function () {
+				if ($('#name').val() == "") {
+					$('#name').focus();
+					alert("姓名不能为空！");
+					return false;
+				}
+				if ($('#tel').val() == "") {
+					$('#tel').focus();
+					alert("电话不能为空！");
+					return false;
+				}
+				if ($('#tel').val() == "") {
+					$('#tel').focus();
+					alert("留言不能为空！");
+					return false;
+				}
+
+			})
+		});
+	</script>
+</head>
+
+<body>
+	<link rel='stylesheet' href='{Stl.SiteUrl}/css/font-awesome.min.css' type='text/css'>
+	<!--搜索-->
+	<stl:include file="/include/header.html"></stl:include>
+	<!--wap导航-->
+
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/sidenav.min.js"></script>
+	<script>$('[data-sidenav]').sidenav();</script>
+	<!--二级开始-->
+	<div class="erji_banner">
+		<stl:image channelName="联系我们"></stl:image>
+	</div>
+	<!--当前位置-->
+	<div class="erji_position">
+		<h3>
+			<p>联系我们</p><span>Contact us</span>
+		</h3>
+		<ul>
+
+			<stl:channels channelName='联系我们' scope='children'>
+                <stl:if testType="UpChannelOrSelf">
+                    <stl:yes>
+                        <li class="erji_position_li1">
+                            <stl:a></stl:a>
+                        </li>
+                    </stl:yes>
+                    <stl:no>
+                        <li>
+                            <stl:a></stl:a>
+                        </li>
+                    </stl:no>
+                </stl:if>
+            </stl:channels>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="erji_liuyan kuandu">
+		<ul>
+			<form action="/plus/diy.php" enctype="multipart/form-data" method="post" id="complain">
+				<input type="hidden" name="action" value="post" />
+				<input type="hidden" name="diyid" value="1" />
+				<input type="hidden" name="do" value="2" />
+				<h1>在线留言</h1>
+				<li><span>姓名：</span><input type="text" name='name' id='name' class="ly_txt" /></li>
+				<li><span>电话：</span><input type="text" name='tel' id='tel' class="ly_txt" /></li>
+				<li class="erji_liuyan_li1"><span>留言：</span><textarea name='liuyan' id='liuyan'
+						class="ly_area"></textarea></li>
+				<input type="hidden" name="dede_fields" value="name,text;tel,text;liuyan,multitext" />
+				<input type="hidden" name="dede_fieldshash" value="68d4dc3499c9f8c72cd06a91185c6b2e" />
+				<li class="erji_liuyan_li2"><input type="submit" name="submit" class="ly_sbt" value="提交" /></li>
+			</form>
+		</ul>
+	</div>
+
+	<!--foot-->
+	<stl:include file="/include/footer.html"></stl:include>
+</body>
+</html>
