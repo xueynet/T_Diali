@@ -318,14 +318,14 @@ text-decoration:none; font-size:14px;}
 .erji_products_xq_top{text-align:center;padding-bottom:30px;}
 .erji_products_xq_top a{font-size:16px;margin:20px;display:inline-block;color:#333;padding:5px 5px 15px 5px;}
 .erji_products_xq_top a:hover{color:#60c2cf;border-bottom:#60c2cf 1px solid;}
-
+.erji_products_xq_top .active{color:#60c2cf;border-bottom:#60c2cf 1px solid;}
 
 /*二级技术中心*/
 .erji_jszx{margin-top:68px;}
 .erji_jszx h1{font-weight:normal;width:220px;float:left;text-align:center;font-size:35px;margin-top:15px;}
 .erji_jszx h1 span{display:inline-block;width:85px;height:1px;background:#808080;margin-top:35px;}
 .erji_jszx .jszx_p1{float:left;margin-left:25px;width:925px;color:#808080;line-height:29px;}
-.erji_jszx dl{width:367px;float:left;overflow:hidden;position:relative;margin:66px 0 0 49px;background:#fcfcfc;padding-bottom:50px;}
+.erji_jszx dl{width:350px;float:left;overflow:hidden;position:relative;margin:66px 0 0 49px;background:#fcfcfc;padding-bottom:70px;}
 .erji_jszx .erji_jszx_dl1{margin-left:0;}
 .erji_jszx dl dt{}
 .erji_jszx dl dt img{width:100%;height:223px;display: block;}
@@ -333,7 +333,7 @@ text-decoration:none; font-size:14px;}
 .erji_jszx dl dd h3{font-weight:normal;font-size:18px;color:#333;background:url(../images/jszx_tb1.jpg) no-repeat left;padding-left:35px;margin-top:38px;}
 .erji_jszx dl dd p{color:#808080;line-height:20px;margin-top:10px;height:40px;overflow:hidden;transition:all .6s;}
 .erji_jszx dl:hover dd p{height:200px;transition:all .6s;padding-bottom:20px;}
-.erji_jszx dl dd b{position:absolute;bottom:-5px;right:40px;color:#e8e8e8;font-size:80px;}
+.erji_jszx dl dd b{position:absolute;right:40px;color:#e8e8e8;font-size:80px; line-height: 60px;}
 .erji_jszx dl:hover dd b{bottom:20px;transition:all .6s;}
 
 .jszx_yfcg{height:180px;background:url(../images/jszx_bg1.jpg) no-repeat center;text-align:center;overflow:hidden;margin-top:90px;}
@@ -860,7 +860,7 @@ transform: scale(1) !important;
 .erji_honor_ul li{float:left;width:278px;margin:50px 12px 0 10px ;}
 .erji_honor_ul li img{width:100%;}*/
 .erji_zizhi_box{text-align:center;}
-.erji_zizhi_box ul li{display:inline-block;height:45px;line-height:45px;margin:45px 30px;}
+.erji_zizhi_box ul li{display:inline-block;height:45px;line-height:45px;margin:45px 30px;cursor: pointer;}
 .erji_zizhi_box ul li a{display:block;font-size:16px;padding:0 7px;}
 .erji_zizhi_box ul .thistab a{border-bottom:#5cc2cf 1px solid;color:#5cc2cf;}
 .erji_zizhi_con ul li a{width:33.33%;display:block;float:left;margin-bottom: 10px;}

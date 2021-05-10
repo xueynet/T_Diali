@@ -57,21 +57,19 @@
 	<div class="erji_index kuandu">
 
 		<div class="erji_pdy_box kuandu">
-			<div class="erji_products_t">
-				岱勒新材销售团队按区域建立完整的全球客户服务网络体系，为客户提供全方位的销售服务。通过直销与代理多种模式结合，依照客户的需求，个性化定制系统解决方案；建立快速售后响应机制，针对具体情况提出迅捷解决方案，最大程度降低对客户的生产影响；持续的技术升级，快速响应，技术跟进，定期回访；让我们的产品更适用、服务更贴心，成为全球金刚线和硬脆材料切割解决方案最优质的服务商；
-			</div>
-			<div style="text-align: center;">
-				<br />
-				<br />
-				<img alt="" src="/uploads/allimg/190109/1-1Z1091ZIQ31.jpg" style="width: 607px; height: 568px;" /><br />
-				<br />
-				<br />
-				<br />
-				<p style="color:#60c2cf;">
-					<span style="font-size:16px;">用系统解决方案替代传统供需模式，技术升级、产品更适用、服务更贴心</span>
-				</p>
-			</div>
-
+			<stl:contents channelName='销售服务'>
+				<div class="erji_products_t">
+					{content.Body}
+				</div>
+				<div style="text-align: center;">
+					<stl:image src='{content.ImageUrl}' ></stl:image>
+					<p style="color: #60c2cf;">
+						<span>
+							{content.Summary}
+						</span>
+					</p>
+				</div>
+			</stl:contents>
 		</div>
 	</div>
 
@@ -79,7 +77,5 @@
 	<!-- 引入底部开始-->
 	<stl:include file="/include/footer.html"></stl:include>
 	<!--引入底部结束 -->
-
 </body>
-
 </html>

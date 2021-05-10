@@ -65,31 +65,15 @@
             <div class="banner-box">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="/shipinyingxiang/2020/0411/233.html">
-                                <img src="/uploads/200411/1-20041113164aT.jpg" about="" title="岱勒新材十周年寄语">
-                                <p>岱勒新材十周年寄语<br /></p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="/shipinyingxiang/2019/0110/145.html">
-                                <img src="/uploads/190110/1-1Z110120559624.jpg" about="" title="激流勇进 你我同行">
-                                <p>激流勇进 你我同行<br /></p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="/shipinyingxiang/2018/1227/34.html">
-                                <img src="/uploads/190110/1-1Z110115HV55.jpg" about="" title="岱勒新材宣传视频">
-                                <p>岱勒新材宣传视频<br /></p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="/shipinyingxiang/2018/1227/33.html">
-                                <img src="/uploads/190110/1-1Z110095405456.jpg" about="" title="秋风送爽 妙趣横生">
-                                <p>秋风送爽 妙趣横生<br /></p>
-                            </a>
-                        </div>
-
+                        <!--  -->
+                        <stl:contents channelName="视频影像">
+                            <div class="swiper-slide">
+                                <stl:a>
+                                    <stl:image src="{content.ImageUrl}"></stl:image>
+                                    <p>{content.Title}</p>
+                                </stl:a>
+                            </div>
+                        </stl:contents>
                     </div>
                     <div class="banner-arrow">
                         <div class="swiper-button-prev"></div>
@@ -127,31 +111,49 @@
         </div>
         <ul class="erji_gskw_ul">
             <h1>公司刊物<br /><span></span></h1>
-            <li>
-                <a href="/uploads/soft/200905/1-200Z5141214.pdf" target="_blank">
-                    <img src="/uploads/allimg/200905/1-200Z51411510-L.jpg" alt="十周年内刊" title="十周年内刊" />
-                    <h3>十周年内刊</h3>
-                    <p>2020-09-05</p>
-                </a>
-            </li>
-            <li>
-                <a href="/uploads/soft/190109/1-1Z109194244.pdf" target="_blank">
-                    <img src="/uploads/190109/1-1Z1091919164D.jpg" alt="激流勇进 你我同行" title="激流勇进 你我同行" />
-                    <h3>激流勇进 你我同行</h3>
-                    <p>2019-05-14</p>
-                </a>
-            </li>
-            <li>
-                <a href="/uploads/soft/190109/1-1Z1091Z305.pdf" target="_blank">
-                    <img src="/uploads/190109/1-1Z109192003323.jpg" alt="无微不至  无坚不克" title="无微不至  无坚不克" />
-                    <h3>无微不至 无坚不克</h3>
-                    <p>2019-01-10</p>
-                </a>
-            </li>
+            <stl:pageContents channelName="公司刊物" pageNum='3'>
+                <li>
+                    <stl:a href="{content.FileUrl}" target="_blank">
+                        <stl:image src="{content.ImageUrl}"></stl:image>
+                        <h3>{content.Title}</h3>
+                        <p><stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></p>
+                    </stl:a>
+                </li>
+            </stl:pageContents>
         </ul>
         <div class="erji_page">
             <ul>
-                <li><span class="pageinfo">共 <strong>1</strong>页<strong>3</strong>条记录</span></li>
+                <stl:pageItem type="PreviousPage">
+					<stl:yes>
+						<li>
+							<a href="{Current.Url}" class="prev">上一页</a>
+						</li>
+					</stl:yes>
+				</stl:pageItem>
+				<stl:pageItem type="PageNavigation" listNum="3">
+					<stl:yes>
+						<li>
+							<a href="{Current.Url}">{Current.Num}</a>
+						</li>
+					</stl:yes>
+					<stl:no>
+						<li class="thisclass">
+							<a href="javascript:;">{Current.Num}</a>
+						</div>
+					</stl:no>
+				</stl:pageItem>
+				<stl:pageItem type="NextPage">
+					<stl:yes>
+						<li>
+							<a href="{Current.Url}" class="next">下一页</a>
+						</li>
+					</stl:yes>
+					<stl:no>
+						<li>
+							<a href="javascript:;" class="next">下一页</a>
+						</li>
+					</stl:no>
+				</stl:pageItem>
 
             </ul>
         </div>

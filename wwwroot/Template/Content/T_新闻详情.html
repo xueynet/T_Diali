@@ -36,13 +36,16 @@
 			<p>新闻中心</p><span>News Center</span>
 		</h3>
 		<ul>
-			<li class='erji_position_li1'><a href='/news/'>企业新闻</a></li>
-			<li><a href="/meitibaodao/">媒体报道</a></li>
-
-			<li><a href="/xingyedongtai/">行业动态</a></li>
-
-			<li><a href="/yingxiangkanwu/">影像刊物</a></li>
-
+			<stl:channels channelName='新闻中心' scope='children'>
+				<stl:if testType="UpChannelOrSelf">
+					<stl:yes>
+						<li class="erji_position_li1"><stl:a></stl:a></li>
+					</stl:yes>
+					<stl:no>
+						<li><stl:a></stl:a></li>
+					</stl:no>
+				</stl:if>
+			</stl:channels>
 		</ul>
 		<div class="clear"></div>
 	</div>

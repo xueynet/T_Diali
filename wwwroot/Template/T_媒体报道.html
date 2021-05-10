@@ -54,26 +54,51 @@
 	</div>
 	<div class="erji_mtbd kuandu">
 		<ul>
-			<li><a href="/plus/view.php?aid=194" target="_blank"><img
-						src="/uploads/allimg/190514/1-1Z5141620340-L.jpg" />
-					<p>央视网/湖南新闻联播-岱勒新材的尖峰</p>
-				</a></li>
-			<li><a href="/plus/view.php?aid=195" target="_blank"><img
-						src="/uploads/allimg/190514/1-1Z514162H30-L.jpg" />
-					<p>全景网-岱勒新材董事长视频专访</p>
-				</a></li>
-			<li><a href="/meitibaodao/2019/0110/185.html" target="_blank"><img
-						src="/uploads/allimg/190110/1-1Z1101614120-L.jpg" />
-					<p>岱勒新材报道-株洲新闻联播</p>
-				</a></li>
+			<stl:pageContents channelName="媒体报道" pageNum='3'>
+				<li>
+					<stl:a>
+						<stl:image src="{content.ImageUrl}"></stl:image>
+						<p>{content.Title}</p>
+					</stl:a>
+				</li>
+			 </stl:pageContents>
 		</ul>
 		<div class="clear"></div>
 
 	</div>
 	<div class="erji_page">
 		<ul>
-			<li><span class="pageinfo">共 <strong>1</strong>页<strong>3</strong>条记录</span></li>
-
+			<stl:pageItem type="PreviousPage">
+					<stl:yes>
+						<li>
+							<a href="{Current.Url}" class="prev">上一页</a>
+						</li>
+					</stl:yes>
+				</stl:pageItem>
+				<stl:pageItem type="PageNavigation" listNum="3">
+					<stl:yes>
+						<li>
+							<a href="{Current.Url}">{Current.Num}</a>
+						</li>
+					</stl:yes>
+					<stl:no>
+						<li class="thisclass">
+							<a href="javascript:;">{Current.Num}</a>
+						</div>
+					</stl:no>
+				</stl:pageItem>
+				<stl:pageItem type="NextPage">
+					<stl:yes>
+						<li>
+							<a href="{Current.Url}" class="next">下一页</a>
+						</li>
+					</stl:yes>
+					<stl:no>
+						<li>
+							<a href="javascript:;" class="next">下一页</a>
+						</li>
+					</stl:no>
+				</stl:pageItem>
 		</ul>
 	</div>
 	<!--foot-->

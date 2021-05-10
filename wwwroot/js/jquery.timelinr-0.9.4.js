@@ -65,8 +65,8 @@ jQuery.fn.timelinr = function(options){
 			var whichIssue = $(this).text();
 			var currentIndex = $(this).parent().prevAll().length;
 
-			console.log(whichIssue);
-			console.log(currentIndex);
+			// console.log(whichIssue);
+			// console.log(currentIndex);
 
 			// moving the elements
 			if(settings.orientation == 'horizontal') {

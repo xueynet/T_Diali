@@ -6,7 +6,7 @@ $(document).ready(function() {
         $(tabtit+" li:first").addClass("thistab").show();
         $(tabcon+":first").show();
     
-        $(tabtit+" li").mouseover(function() {
+        $(tabtit+" li").click(function() {
             $(tabtit+" li").removeClass("thistab");
             $(this).addClass("thistab");
             $(tabcon).hide();
@@ -27,7 +27,7 @@ $(document).ready(function() {
         $(tabtit+" li:first").addClass("thistab").show();
         $(tabcon+":first").show();
     
-        $(tabtit+" li").mouseover(function() {
+        $(tabtit+" li").click(function() {
             $(tabtit+" li").removeClass("thistab");
             $(this).addClass("thistab");
             $(tabcon).hide();
@@ -49,7 +49,7 @@ $(document).ready(function() {
         $(tabtit+" li:first").addClass("thistab").show();
         $(tabcon+":first").show();
     
-        $(tabtit+" li").mouseover(function() {
+        $(tabtit+" li").click(function() {
             $(tabtit+" li").removeClass("thistab");
             $(this).addClass("thistab");
             $(tabcon).hide();
