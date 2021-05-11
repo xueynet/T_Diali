@@ -1386,6 +1386,7 @@ transform: scale(1) !important;
 .home_main_r{width:95%;}
 .home_main_r dl dt{width:20%;}
 .home_main_r dl dd{width:75%;}
+.home_main_r dl dd p{overflow : hidden;text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 2;-webkit-box-orient: vertical;}
 .home_main_r_ul{padding-bottom:3%;}
 
 .home_main h1{height: 43px;line-height: 43px;}

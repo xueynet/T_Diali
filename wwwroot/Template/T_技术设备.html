@@ -60,42 +60,51 @@
 		<p><span style="font-size:16px;">技术中心设有独立、标准的实验室，技术开发仪器设备100多台（套），可以满足相应的技术研发和试验工作，为技术研发与产品质量保驾护航。</span></p>
 		<div class="erji_jssb">
 			<ul>
-				<li><a href="/jishushebei/2019/0107/65.html"><img src="/uploads/allimg/190107/1-1Z10G63G50-L.jpg"
-							alt="FEI扫描电子量微镜+OXFORD能谱仪" title="FEI扫描电子量微镜+OXFORD能谱仪" />
-						<h3>FEI扫描电子量微镜+OXFORD能谱仪</h3>
-					</a></li>
-				<li><a href="/jishushebei/2019/0107/77.html"><img src="/uploads/allimg/190107/1-1Z10GJ5450-L.jpg"
-							alt="三维高分辨率激光显微镜" title="三维高分辨率激光显微镜" />
-						<h3>三维高分辨率激光显微镜</h3>
-					</a></li>
-				<li><a href="/jishushebei/2019/0107/78.html"><img src="/uploads/allimg/190107/1-1Z10GJ6410-L.jpg"
-							alt="线锯分析仪" title="线锯分析仪" />
-						<h3>线锯分析仪</h3>
-					</a></li>
-				<li><a href="/jishushebei/2018/1227/22.html"><img src="/uploads/190107/1-1Z10G63041b7.jpg" alt="原子分度计"
-							title="原子分度计" />
-						<h3>原子分度计</h3>
-					</a></li>
-				<li><a href="/jishushebei/2019/0107/73.html"><img src="/uploads/allimg/190107/1-1Z10GJ0540-L.jpg"
-							alt="还原炉" title="还原炉" />
-						<h3>还原炉</h3>
-					</a></li>
-				<li><a href="/jishushebei/2019/0107/74.html"><img src="/uploads/allimg/190107/1-1Z10GJ1400-L.jpg"
-							alt="拉力试验机" title="拉力试验机" />
-						<h3>拉力试验机</h3>
-					</a></li>
+				<stl:pageContents channelName='技术设备' pageNum="6">
+					<li>
+						<stl:a>
+							<img src="{content.ImageUrl}">
+							<h3>{content.Title}</h3>
+						</stl:a>
+					</li>
+				</stl:pageContents>
 			</ul>
 			<div class="clear"></div>
 		</div>
 	</div>
 	<div class="erji_page">
 		<ul>
-			<li>首页</li>
-			<li class="thisclass">1</li>
-			<li><a href='list_17_2.html'>2</a></li>
-			<li><a href='list_17_2.html'>下一页</a></li>
-			<li><a href='list_17_2.html'>末页</a></li>
-
+			<stl:pageItem type="PreviousPage">
+				<stl:yes>
+					<li>
+						<a href="{Current.Url}" class="prev">上一页</a>
+					</li>
+				</stl:yes>
+			</stl:pageItem>
+			<stl:pageItem type="PageNavigation" listNum="3">
+				<stl:yes>
+					<li>
+						<a href="{Current.Url}">{Current.Num}</a>
+					</li>
+				</stl:yes>
+				<stl:no>
+					<li class="thisclass">
+						<a href="javascript:;">{Current.Num}</a>
+					</div>
+				</stl:no>
+			</stl:pageItem>
+			<stl:pageItem type="NextPage">
+				<stl:yes>
+					<li>
+						<a href="{Current.Url}" class="next">下一页</a>
+					</li>
+				</stl:yes>
+				<stl:no>
+					<li>
+						<a href="javascript:;" class="next">下一页</a>
+					</li>
+				</stl:no>
+			</stl:pageItem>
 		</ul>
 	</div>
 	<!--foot-->

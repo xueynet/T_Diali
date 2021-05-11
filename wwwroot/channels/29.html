@@ -384,9 +384,8 @@
   <div id="sousuo_box">
     <div class="sousuo_box_con kuandu">
       <div class="search_info">
-        <form name="formsearch" action="/plus/search.php">
-          <input type="hidden" name="kwtype" value="0" />
-          <input name="q" id="search-keyword" type="text" onBlur="if (value=='') {value='请输入关键词'} "
+        <form name="formsearch" action="/search.html">
+          <input name="word" id="search-keyword" type="text" onBlur="if (value=='') {value='请输入关键词'} "
             onFocus="if(value=='请输入关键词') {value=''}" value="请输入关键词" class="head_ss_txt" />
           <input type="submit" class="head_ss_sbt" value="" />
         </form>
@@ -489,7 +488,7 @@
 	</div>
 	<div class="jszx_yfcg_box kuandu">
 		<dl>
-			<dt><img src="/skin/images/jszx_img2.jpg" /></dt>
+			<dt><img src="/images/jszx_img2.jpg" /></dt>
 			<dd>
 				<h3>岱勒新材坚持技术创新引领行业发展</h3>
 				<p>省级企业技术中心每年投入1000多万元专项研发资金用于技术创新和产品研发。截至目前，公司累计申请专利50项，其中授权PCT国际专利2项、发明专利19项、实用新型5项，是中国电镀金刚石线行业标准《超硬磨料制品电镀金刚石线》（JB/T
@@ -502,65 +501,47 @@
 				<div class="banner-box">
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<a href="javascript:;">
-									<img src="/uploads/allimg/190110/1-1Z1101400190-L.jpg" about="" title="">
-									<h3>2015-2017</h3>
-									<p>2015年至2017年，公司每年研发费用实际支出966.48万元、1239.74万元和1865.34万元，分别占当年销售收入的7.3%、6.7%、4.3%。
-									</p>
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="javascript:;">
-									<img src="/uploads/allimg/190110/1-1Z1101359580-L.jpg" about="" title="">
-									<h3>2015</h3>
-									<p>2015年，公司技术中心被认定为长沙市级企业技术中心。</p>
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="javascript:;">
-									<img src="/uploads/allimg/190110/1-1Z1101359470-L.jpg" about="" title="">
-									<h3>2014</h3>
-									<p>2014年9月，公司产品金刚石线通过了中国有色金属工业协会的科技成果鉴定，鉴定结论为“整体技术达到国际领先水平”。</p>
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="javascript:;">
-									<img src="/uploads/allimg/190110/1-1Z1101359350-L.jpg" about="" title="">
-									<h3>2013</h3>
-									<p>2013年2月，科技部部长万钢评价：“长沙岱勒新材料科技有限公司研发的金刚石线，打破了日美企业垄断”。同时本公司被推荐为中国参与“达沃斯世界经济论坛技术先锋项目”评比的30家企业之一。
-										2013年9月，公司产品金刚石线通过了国家重点新产品认定，同年10月获《国家创新基金重点创新项目》立项。</p>
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="javascript:;">
-									<img src="/uploads/allimg/190110/1-1Z1101359240-L.jpg" about="" title="">
-									<h3>2012</h3>
-									<p>2012年，项目产品通过湖南省科技成果鉴定和新产品鉴定，鉴定结果为：“该产品填补了国内空白，生产技术和产品性能达到国际先进水平”</p>
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="javascript:;">
-									<img src="/uploads/allimg/190110/1-1Z1101359120-L.jpg" about="" title="">
-									<h3>2011</h3>
-									<p>2011年，项目进入湖南省“四千工程”创业计划，同年公司被认定为高新技术企业</p>
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="javascript:;">
-									<img src="/uploads/190110/1-1Z110135SO64.jpg" about="" title="">
-									<h3>2009年</h3>
-									<p>2009年，岱勒新材的金刚石线产业化被列入国家创新基金项目；</p>
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="javascript:;">
-									<img src="/uploads/allimg/190110/1-1Z1101400310-L.jpg" about="" title="">
-									<h3>2018</h3>
-									<p>2018年成立省级技术中心。现有总面积达5200平米的研发大楼，作为技术中心研发产品的产业化实验基地，拥有技术开发仪器设备100多台（套），总价值1200多万元。
-									</p>
-								</a>
-							</div>
+							
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<img src="/upload/images/2021/5/c35f0ea5dde6e34.jpg" about="" title="">
+										<h3>2012</h3>
+										<p>2012年，项目产品通过湖南省科技成果鉴定和新产品鉴定，鉴定结果为：“该产品填补了国内空白，生产技术和产品性能达到国际先进水平”。</p>
+									</a>
+								</div>
+							
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<img src="/upload/images/2021/5/e743feb789cc5d9.jpg" about="" title="">
+										<h3>2013</h3>
+										<p>2013年2月，科技部部长万钢评价：“长沙岱勒新材料科技有限公司研发的金刚石线，打破了日美企业垄断”。同时本公司被推荐为中国参与“达沃斯世界经济论坛技术先锋项目”评比的30家企业之一。2013年9月，公司产品金刚石线通过了国家重点新产品认定，同年10月获《国家创新基金重点创新项目》立项。</p>
+									</a>
+								</div>
+							
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<img src="/upload/images/2021/5/21e1872664c5646.jpg" about="" title="">
+										<h3>2014</h3>
+										<p>2014年9月，公司产品金刚石线通过了中国有色金属工业协会的科技成果鉴定，鉴定结论为“整体技术达到国际领先水平”。</p>
+									</a>
+								</div>
+							
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<img src="/upload/images/2021/5/91b8222f23b8f479.jpg" about="" title="">
+										<h3>2015</h3>
+										<p>2015年，公司技术中心被认定为长沙市级企业技术中心。</p>
+									</a>
+								</div>
+							
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<img src="/upload/images/2021/5/17300e7a4ec2e41a.jpg" about="" title="">
+										<h3>2015-2017</h3>
+										<p>2015年至2017年，公司每年研发费用实际支出966.48万元、1239.74万元和1865.34万元，分别占当年销售收入的7.3%、6.7%、4.3%。</p>
+									</a>
+								</div>
+							
 						</div>
 						<div class="banner-arrow">
 							<div class="swiper-button-prev"></div>
@@ -603,16 +584,25 @@
 	<div class="erji_jsslzs kuandu">
 		<h3>技术实力证书<br /><i></i></h3>
 		<ul>
-			<li><a href="/jsslzs/2019/0109/142.html" target="_blank"><img src="/uploads/190515/1-1Z515110303621.jpg" />
-					<h1>公司牵头制定的产品行业标准</h1>
-				</a></li>
-			<li><a href="/jsslzs/2019/0104/47.html" target="_blank"><img src="/uploads/190515/1-1Z51511023QX.jpg" />
-					<h1>新产品鉴定验收证书</h1>
-				</a></li>
-			<li><a href="/jsslzs/2019/0104/46.html" target="_blank"><img src="/uploads/190515/1-1Z51511015a29.jpg" />
+			
+				<li>
+					<a href="/contents/32/88.html">
+						<img src="/images/1-1Z1091F119622.jpg"></a>
 					<h1>科学技术成果鉴定证书</h1>
-				</a></li>
-
+				</li>
+			
+				<li>
+					<a href="/contents/32/87.html">
+						<img src="/images/1-1Z1091F119622.jpg"></a>
+					<h1>新产品鉴定验收证书</h1>
+				</li>
+			
+				<li>
+					<a href="/contents/32/86.html">
+						<img src="/images/1-1Z1091F119622.jpg"></a>
+					<h1>公司牵头制定的产品行业标准</h1>
+				</li>
+			
 		</ul>
 		
 	</div>

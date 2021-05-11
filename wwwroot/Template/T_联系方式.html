@@ -57,7 +57,15 @@
 		<div class="clear"></div>
 	</div>
 	<div class="erji_contact kuandu">
-			{channel.content}
+		<ul>
+			<stl:contents channelName='联系方式'>
+				<li>
+					<h1>{content.Title}</h1>
+					<div>{content.Body}</div>
+				</li>
+			</stl:contents>
+		 </ul>
+			<!-- {channel.content} -->
 	</div>
 
 	<!--foot-->

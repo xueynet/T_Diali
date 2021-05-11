@@ -131,9 +131,8 @@
   <div id="sousuo_box">
     <div class="sousuo_box_con kuandu">
       <div class="search_info">
-        <form name="formsearch" action="/plus/search.php">
-          <input type="hidden" name="kwtype" value="0" />
-          <input name="q" id="search-keyword" type="text" onBlur="if (value=='') {value='请输入关键词'} "
+        <form name="formsearch" action="{Stl.SiteUrl}/search.html">
+          <input name="word" id="search-keyword" type="text" onBlur="if (value=='') {value='请输入关键词'} "
             onFocus="if(value=='请输入关键词') {value=''}" value="请输入关键词" class="head_ss_txt" />
           <input type="submit" class="head_ss_sbt" value="" />
         </form>

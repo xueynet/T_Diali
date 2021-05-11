@@ -17,7 +17,7 @@
 	<script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
 	<!--企业文化-->
 	<script type="text/javascript" src="/js/swiper.min.js"></script>
-</head>
+<script src="/sitefiles/assets/lib/jquery-1.9.1.min.js" type="text/javascript"></script></head>
 
 <body>
 	<link rel='stylesheet' href='/css/font-awesome.min.css' type='text/css'>
@@ -384,9 +384,8 @@
   <div id="sousuo_box">
     <div class="sousuo_box_con kuandu">
       <div class="search_info">
-        <form name="formsearch" action="/plus/search.php">
-          <input type="hidden" name="kwtype" value="0" />
-          <input name="q" id="search-keyword" type="text" onBlur="if (value=='') {value='请输入关键词'} "
+        <form name="formsearch" action="/search.html">
+          <input name="word" id="search-keyword" type="text" onBlur="if (value=='') {value='请输入关键词'} "
             onFocus="if(value=='请输入关键词') {value=''}" value="请输入关键词" class="head_ss_txt" />
           <input type="submit" class="head_ss_sbt" value="" />
         </form>
@@ -441,42 +440,67 @@
 		<p><span style="font-size:16px;">技术中心设有独立、标准的实验室，技术开发仪器设备100多台（套），可以满足相应的技术研发和试验工作，为技术研发与产品质量保驾护航。</span></p>
 		<div class="erji_jssb">
 			<ul>
-				<li><a href="/jishushebei/2019/0107/65.html"><img src="/uploads/allimg/190107/1-1Z10G63G50-L.jpg"
-							alt="FEI扫描电子量微镜+OXFORD能谱仪" title="FEI扫描电子量微镜+OXFORD能谱仪" />
-						<h3>FEI扫描电子量微镜+OXFORD能谱仪</h3>
-					</a></li>
-				<li><a href="/jishushebei/2019/0107/77.html"><img src="/uploads/allimg/190107/1-1Z10GJ5450-L.jpg"
-							alt="三维高分辨率激光显微镜" title="三维高分辨率激光显微镜" />
-						<h3>三维高分辨率激光显微镜</h3>
-					</a></li>
-				<li><a href="/jishushebei/2019/0107/78.html"><img src="/uploads/allimg/190107/1-1Z10GJ6410-L.jpg"
-							alt="线锯分析仪" title="线锯分析仪" />
-						<h3>线锯分析仪</h3>
-					</a></li>
-				<li><a href="/jishushebei/2018/1227/22.html"><img src="/uploads/190107/1-1Z10G63041b7.jpg" alt="原子分度计"
-							title="原子分度计" />
-						<h3>原子分度计</h3>
-					</a></li>
-				<li><a href="/jishushebei/2019/0107/73.html"><img src="/uploads/allimg/190107/1-1Z10GJ0540-L.jpg"
-							alt="还原炉" title="还原炉" />
-						<h3>还原炉</h3>
-					</a></li>
-				<li><a href="/jishushebei/2019/0107/74.html"><img src="/uploads/allimg/190107/1-1Z10GJ1400-L.jpg"
-							alt="拉力试验机" title="拉力试验机" />
-						<h3>拉力试验机</h3>
-					</a></li>
+				
+					<li>
+						<a href="/contents/33/104.html">
+							<img src="/upload/images/2021/5/4d4972fcdc6cfde.jpg">
+							<h3>扭力机</h3>
+						</a>
+					</li>
+				
+					<li>
+						<a href="/contents/33/103.html">
+							<img src="/upload/images/2021/5/5bd6ef903bad4e41.jpg">
+							<h3>拉力试验机</h3>
+						</a>
+					</li>
+				
+					<li>
+						<a href="/contents/33/102.html">
+							<img src="/upload/images/2021/5/8740181d8ce0d88d.jpg">
+							<h3>还原炉</h3>
+						</a>
+					</li>
+				
+					<li>
+						<a href="/contents/33/101.html">
+							<img src="/upload/images/2021/5/b07b229227781c99.jpg">
+							<h3>原子分度计</h3>
+						</a>
+					</li>
+				
+					<li>
+						<a href="/contents/33/100.html">
+							<img src="/upload/images/2021/5/971beb53dcbc9bc9.jpg">
+							<h3>线锯分析仪</h3>
+						</a>
+					</li>
+				
+					<li>
+						<a href="/contents/33/99.html">
+							<img src="/upload/images/2021/5/c01e7aa042599a02.jpg">
+							<h3>三维高分辨率激光显微镜</h3>
+						</a>
+					</li>
+				
 			</ul>
 			<div class="clear"></div>
 		</div>
 	</div>
 	<div class="erji_page">
 		<ul>
-			<li>首页</li>
-			<li class="thisclass">1</li>
-			<li><a href='list_17_2.html'>2</a></li>
-			<li><a href='list_17_2.html'>下一页</a></li>
-			<li><a href='list_17_2.html'>末页</a></li>
-
+			<li>
+						<a href="javascript:;" class="prev">上一页</a>
+					</li>
+			<li class="thisclass">
+						<a href="javascript:;">1</a>
+					
+				</li><li>
+						<a href="/channels/33_2.html">2</a>
+					</li>
+			<li>
+						<a href="/channels/33_2.html" class="next">下一页</a>
+					</li>
 		</ul>
 	</div>
 	<!--foot-->
