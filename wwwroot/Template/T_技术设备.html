@@ -31,7 +31,10 @@
 	<script>$('[data-sidenav]').sidenav();</script>
 	<!--二级开始-->
 	<div class="erji_banner">
-		<stl:image channelName="技术中心"></stl:image>
+		<!-- <stl:image channelName="技术中心"></stl:image> -->
+		<stl:channel channelName="技术中心" type='imageUrl'>
+			<stl:image></stl:image>
+		</stl:channel>
 	</div>
 	<!--当前位置-->
 	<div class="erji_position">
@@ -57,7 +60,7 @@
 		<div class="clear"></div>
 	</div>
 	<div class="erji_jssb kuandu">
-		<p><span style="font-size:16px;">技术中心设有独立、标准的实验室，技术开发仪器设备100多台（套），可以满足相应的技术研发和试验工作，为技术研发与产品质量保驾护航。</span></p>
+		<stl:channel channelName="技术设备" type="content"></stl:channel>
 		<div class="erji_jssb">
 			<ul>
 				<stl:pageContents channelName='技术设备' pageNum="6">
@@ -112,5 +115,4 @@
 	<stl:include file="/include/footer.html"></stl:include>
 	<!-- 引入底部结束 -->
 </body>
-
 </html>

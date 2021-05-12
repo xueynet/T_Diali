@@ -30,7 +30,7 @@ img{border:0;}
 .head_con ul li:hover .top_tzz{display:block;}
 .home_nav{height:89px;line-height:89px;position:relative;z-index:666;}
 .logo{width:316px;float:left;}
-.logo img{margin-top:25px;}
+.logo img{margin-top:35px;}
 .nav_box{width:855px;float:left;}
 #nav-menu{}
 #nav-menu .container{position:relative;overflow:visible; z-index:99;}

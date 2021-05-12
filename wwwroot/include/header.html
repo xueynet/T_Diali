@@ -43,40 +43,86 @@
     <div class="clear"></div>
   </div>
   <div class="home_nav">
-    <div class="logo"><a href="/"><img src="{Stl.SiteUrl}/images/logo.png"></a></div>
+    <div class="logo"><a href="/"><img src="{Stl.SiteUrl}/images/logo.jpg"></a></div>
     <div class="nav_box">
       <!--pc导航开始-->
       <div id="nav-menu">
         <ul class="menu">
-          <li class='nav_box_li1'>
-            <h3>
-              <a href="{Stl.SiteUrl}/index.html" class="xialaguang"><span>首页</span></a>
-            </h3>
-          </li>
+          <!-- <li > -->
+          <stl:if testType="ChannelName" testOperate="Equals" value="首页">
+            <stl:yes>
+              <li class="nav_box_li1">
+                <h3>
+                  <a href="{Stl.SiteUrl}/index.html" class="xialaguang"><span>首页</span></a>
+                </h3>
+              </li>
+            </stl:yes>
+            <stl:no>
+              <li>
+                <h3>
+                  <a href="{Stl.SiteUrl}/index.html" class="xialaguang"><span>首页</span></a>
+                </h3>
+              </li>
+            </stl:no>
+          </stl:if>
+
+          <!-- </li> -->
           <stl:channels topLevel="0" groupChannel="nav">
+            <!-- testType="UpChannelOrSelf"  op=-->
             <stl:if type="CountOfChannels" operate="GreatThan" value="0">
               <stl:yes>
-                <li class="stmenu">
-                  <h3>
-                    <stl:a class="xialaguang"><span>{Channel.Title}</span></stl:a>
-                  </h3>
-                  <ul class="children">
-                    <stl:channels>
-                      <li>
-                        <h3>
-                          <stl:a><span>{Channel.Title}</span></stl:a>
-                        </h3>
-                      </li>
-                    </stl:channels>
-                  </ul>
-                </li>
+                <stl:if testType="UpChannelOrSelf">
+                  <stl:successTemplate>
+                    <li class="stmenu nav_box_li1">
+                      <h3>
+                        <stl:a class="xialaguang"><span>{Channel.Title}</span></stl:a>
+                      </h3>
+                      <ul class="children">
+                        <stl:channels>
+                          <li>
+                            <h3>
+                              <stl:a><span>{Channel.Title}</span></stl:a>
+                            </h3>
+                          </li>
+                        </stl:channels>
+                      </ul>
+                    </li>
+                  </stl:successTemplate>
+                  <stl:failureTemplate>
+                    <li class="stmenu">
+                      <h3>
+                        <stl:a class="xialaguang"><span>{Channel.Title}</span></stl:a>
+                      </h3>
+                      <ul class="children">
+                        <stl:channels>
+                          <li>
+                            <h3>
+                              <stl:a><span>{Channel.Title}</span></stl:a>
+                            </h3>
+                          </li>
+                        </stl:channels>
+                      </ul>
+                    </li>
+                  </stl:failureTemplate>
+                </stl:if>
               </stl:yes>
               <stl:no>
-                <li>
-                  <h3>
-                    <stl:a><span>{Channel.Title}</span></stl:a>
-                  </h3>
-                </li>
+                <stl:if testType="UpChannelOrSelf">
+                  <stl:successTemplate>
+                    <li class="stmenu nav_box_li1">
+                      <h3>
+                        <stl:a class="xialaguang"><span>{Channel.Title}</span></stl:a>
+                      </h3>
+                    </li>
+                  </stl:successTemplate>
+                  <stl:failureTemplate>
+                    <li class="stmenu">
+                      <h3>
+                        <stl:a class="xialaguang"><span>{Channel.Title}</span></stl:a>
+                      </h3>
+                    </li>
+                  </stl:failureTemplate>
+                </stl:if>
               </stl:no>
             </stl:if>
           </stl:channels>
@@ -107,20 +153,22 @@
                 </stl:a>
                 <ul class="sidenav-dropdown" data-sidenav-dropdown>
                   <stl:channels>
-                    <li><stl:a>{Channel.Title}</stl:a></li>
+                    <li>
+                      <stl:a>{Channel.Title}</stl:a>
+                    </li>
                   </stl:channels>
                 </ul>
               </li>
             </stl:yes>
             <stl:no>
               <li>
-                  <stl:a><span class="sidenav-link-title">{Channel.Title}</span></stl:a>
+                <stl:a><span class="sidenav-link-title">{Channel.Title}</span></stl:a>
               </li>
             </stl:no>
           </stl:if>
         </stl:channels>
-          </ul>
-        </li>
+      </ul>
+      </li>
       </ul>
     </nav>
     <a href="javascript:;" class="wap_nav" id="sidenav-toggle">
@@ -154,4 +202,3 @@
 
 <script type="text/javascript" src="{Stl.SiteUrl}/js/sidenav.min.js"></script>
 <script>$('[data-sidenav]').sidenav();</script>
-
