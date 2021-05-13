@@ -316,6 +316,8 @@ text-decoration:none; font-size:14px;}
 .pro_xq_info img{max-width:100%;height:auto !important;}
 
 .erji_products_xq_top{text-align:center;padding-bottom:30px;}
+.erji_products_xq_top span{font-size: 26px;}
+
 .erji_products_xq_top a{font-size:16px;margin:20px;display:inline-block;color:#333;padding:5px 5px 15px 5px;}
 .erji_products_xq_top a:hover{color:#60c2cf;border-bottom:#60c2cf 1px solid;}
 .erji_products_xq_top .active{color:#60c2cf;border-bottom:#60c2cf 1px solid;}

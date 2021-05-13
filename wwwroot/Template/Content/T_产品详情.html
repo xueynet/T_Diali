@@ -19,6 +19,19 @@
 </head>
 
 <body>
+	<!-- <script type="text/javascript">
+        $(function() {
+            $("#table1 a").each(function(index) {
+				console.log(index);
+				debugger;
+				$(this).click(function() {
+                    $("a.active").removeClass("active"); //注意这里
+                    $(this).addClass("active"); //注意这里
+				});
+
+            });
+        });
+    </script> -->
 	<link rel='stylesheet' href='{Stl.SiteUrl}/css/font-awesome.min.css' type='text/css'>
 	<!--搜索-->
 	<stl:include file="/include/header.html"></stl:include>
@@ -56,10 +69,8 @@
 		</ul>
 		<div class="clear"></div>
 	</div>
-	<div class="erji_products_xq_top kuandu" id="table1">
-		<stl:contents channelName='产品介绍'>
-			<stl:a>{content.Title}</stl:a>
-		</stl:contents>
+	<div class="erji_products_xq_top kuandu">
+		<span>{content.Title}</span>
 	</div>
 	<div class="erji_products_xq kuandu">
 		{content.Body}
