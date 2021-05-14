@@ -1,0 +1,168 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<stl:include file="/include/meta.html"></stl:include>
+	<link href="{Stl.SiteUrl}/css/css.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/jquery-1.8.2.min.js"></script>
+	<!--企业文化-->
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/swiper.min.js"></script>
+</head>
+
+<body>
+	<link rel='stylesheet' href='{Stl.SiteUrl}/css/font-awesome.min.css' type='text/css'>
+	<!--搜索-->
+	<!-- 引入头部开始-->
+	<stl:include file="/include/header.html"></stl:include>
+	<!--引入头部结束 -->
+	<!--wap导航-->
+
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/sidenav.min.js"></script>
+	<script>$('[data-sidenav]').sidenav();</script>
+	<!--二级开始-->
+	<div class="erji_banner">
+		<stl:image channelName="技术中心"></stl:image>
+	</div>
+	<!--当前位置-->
+	<div class="erji_position">
+		<h3>
+			<p>技术中心</p><span>Technology Center</span>
+		</h3>
+		<ul>
+			<stl:channels channelName='技术中心' scope='children'>
+                <stl:if testType="UpChannelOrSelf">
+                    <stl:yes>
+                        <li class="erji_position_li1">
+                            <stl:a></stl:a>
+                        </li>
+                    </stl:yes>
+                    <stl:no>
+                        <li>
+                            <stl:a></stl:a>
+                        </li>
+                    </stl:no>
+                </stl:if>
+            </stl:channels>
+
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="erji_jszx kuandu">
+		<!-- <stl:channel channleName='技术战略'>
+			<h1>{channel.Title}</h1>
+			<p class="jszx_p1">{channel.content}</p>
+		</stl:channel> -->
+		<h1>
+			<!-- 技术战略 -->
+			<stl:channel channelName="技术战略" type="Title"></stl:channel>
+			<br /><span></span></h1>
+		<p class="jszx_p1">
+			<stl:channel channelName="技术战略" type="content"></stl:channel>
+			<!-- 技术中心定位于“引领公司未来发展，推进公司技术进步，保障公司在行业中的持续领先地位”，坚持以提升岱勒新材核心竞争力为目标，通过加大技术研发投入，始终把握超硬材料行业前沿技术，引领行业发展方向；推进技术成果转化，不断将技术研发成果转化为公司强劲的生产力，实现良好的经济效益和社会效益，推动企业可持续进步和发展。 -->
+		</p>
+		<div class="clear"></div>
+		<stl:contents channelName='技术战略'>
+			<dl>
+				<dt>
+					<stl:image src='{content.ImageUrl}'></stl:image>
+				</dt>
+				<dd>
+					<h3>{content.Title}</h3>
+					{content.Body}
+					<b>{content.Summary}</b>
+				</dd>
+			</dl>
+		</stl:contents>
+
+		<div class="clear"></div>
+	</div>
+	<div class="jszx_yfcg">
+		<h1>研发成果<br /><span></span></h1>
+	</div>
+	<div class="jszx_yfcg_box kuandu">
+		<dl>
+			<dt><img src="{Stl.SiteUrl}/images/jszx_img2.jpg" /></dt>
+			<dd>
+				<h3>岱勒新材坚持技术创新引领行业发展</h3>
+				<p>省级企业技术中心每年投入1000多万元专项研发资金用于技术创新和产品研发。截至目前，公司累计申请专利50项，其中授权PCT国际专利2项、发明专利19项、实用新型5项，是中国电镀金刚石线行业标准《超硬磨料制品电镀金刚石线》（JB/T
+					12543-2015）制定者。</p>
+			</dd>
+		</dl>
+		<div class="jszx_yfcg_box_b">
+			<div class="jszx_yfcg_box_b_con">
+				<!--内容-->
+				<div class="banner-box">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<stl:contents channelName='研发成果'>
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<img src="{content.ImageUrl}" about="" title="">
+										<h3>{content.Title}</h3>
+										{content.Body}
+									</a>
+								</div>
+							</stl:contents>
+						</div>
+						<div class="banner-arrow">
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+				</div>
+				<!--内容-->
+			</div>
+			<script type="text/javascript">
+
+				window.onload = function () {
+					var swiper = new Swiper('.swiper-container', {
+						autoplay: 5000, //是否自动滚动
+						speed: 500,      //滚动速速
+						time: 5000,
+						autoplayDisableOnInteraction: false,
+						loop: true,
+						centeredSlides: true,
+						slidesPerView: 3, //当前选中
+						pagination: '.swiper-pagination',
+						paginationClickable: true,
+						prevButton: '.swiper-button-prev', // 左右切换
+						nextButton: '.swiper-button-next', // 左右切换
+						onInit: function (swiper) {
+							swiper.slides[3].className = "swiper-slide swiper-slide-active"; //当前选中 状态
+						},
+						breakpoints: {
+							100: {
+								slidesPerView: 0,
+							}
+						}
+					});
+				}
+			</script>
+		</div>
+	</div>
+	<!--技术实力证书-->
+	<!-- <link rel="stylesheet" type="text/css" href="/skin/css/viewer.min.css" /> -->
+	<div class="erji_jsslzs kuandu">
+		<h3><stl:channel channelName='技术实力证书'></stl:channel><br /><i></i></h3>
+		<ul>
+			<stl:contents channelName='技术实力证书'>
+				<li>
+					<stl:a>
+						<stl:image src="{Stl.SiteUrl}/images/1-1Z1091F119622.jpg">
+					</stl:a>
+					<h1>{content.Title}</h1>
+				</li>
+			</stl:contents>
+		</ul>
+		
+	</div>
+	
+	<!--foot-->
+	<!-- 引入底部开始-->
+	<stl:include file="/include/footer.html"></stl:include>
+	<!--引入底部结束 -->
+</body>
+
+</html>

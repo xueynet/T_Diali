@@ -1,0 +1,80 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<stl:include file="/include/meta.html"></stl:include>
+	<link href="{Stl.SiteUrl}/css/css.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/jquery-1.8.2.min.js"></script>
+	<stl:include file="/include/mete.html"></stl:include>
+</head>
+
+<body>
+	<link rel='stylesheet' href='{Stl.SiteUrl}/css/font-awesome.min.css' type='text/css'>
+	<!--搜索-->
+	<!-- 引入头部开始-->
+	<stl:include file="/include/header.html"></stl:include>
+	<!--引入头部结束 -->
+	<!--wap导航-->
+
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/sidenav.min.js"></script>
+	<script>$('[data-sidenav]').sidenav();</script>
+	<!--二级开始-->
+	<div class="erji_banner">
+		<stl:image channelName="产品中心"></stl:image>
+	</div>
+	<!--当前位置-->
+	<div class="erji_position">
+		<h3>
+			<p>产品中心</p><span>Product Center</span>
+		</h3>
+		<ul>
+			<stl:channels channelName='产品中心' scope='children'>
+                <stl:if testType="UpChannelOrSelf">
+                    <stl:yes>
+                        <li class="erji_position_li1">
+                            <stl:a></stl:a>
+                        </li>
+                    </stl:yes>
+                    <stl:no>
+                        <li>
+                            <stl:a></stl:a>
+                        </li>
+                    </stl:no>
+                </stl:if>
+            </stl:channels>
+
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="erji_products kuandu">
+		<div class="erji_products_t">
+			<stl:channel channelName="产品介绍" type="content"></stl:channel>
+		</div>
+		<div class="erji_products_b">
+			<stl:contents channelName="产品介绍">
+				<dl>
+					<stl:a>
+						<dt>
+							<h3>{content.Title}</h3>
+							<p>{content.subTitle}</p>
+						</dt>
+						<dd>
+							<stl:image src="{content.ImageUrl}"></stl:image>
+							<p>{content.Summary}</p>
+						</dd>
+					</stl:a>
+				</dl>
+			</stl:contents>
+		</div>
+	</div>
+	<!--foot-->
+	<!-- 引入底部开始-->
+	<stl:include file="/include/footer.html"></stl:include>
+	<!--引入底部结束 -->
+
+</body>
+
+</html>
+

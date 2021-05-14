@@ -1,0 +1,215 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<stl:include file="/include/meta.html"></stl:include>
+	<link href="{Stl.SiteUrl}/css/css.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/jquery-1.8.2.min.js"></script>
+
+	<!--引用百度地图API-->
+	<style type="text/css">
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.iw_poi_title {
+			color: #5cc2cf;
+			font-size: 14px;
+			font-weight: bold;
+			overflow: hidden;
+			padding-right: 13px;
+			white-space: nowrap
+		}
+
+		.iw_poi_content {
+			font: 12px arial, sans-serif;
+			overflow: visible;
+			padding-top: 4px;
+			white-space: -moz-pre-wrap;
+			word-wrap: break-word;
+		}
+
+		.BMap_Marker div {
+			width: 24px !important;
+			height: 25px !important;
+		}
+	</style>
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/92d8498f4078499ba1b04299f35b9fb3.js"></script>
+</head>
+
+<body>
+	<link rel='stylesheet' href='{Stl.SiteUrl}/css/font-awesome.min.css' type='text/css'>
+	<!--搜索-->
+	<!-- 头部开始-->
+	<stl:include file="/include/header.html"></stl:include>
+	<!-- 头部结束 -->
+	<!--wap导航-->
+
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/sidenav.min.js"></script>
+	<script>$('[data-sidenav]').sidenav();</script>
+	<!--二级开始-->
+	<div class="erji_banner">
+		<stl:image channelName="联系我们"></stl:image>
+	</div>
+	<!--当前位置-->
+	<div class="erji_position">
+		<h3>
+			<p>联系我们</p><span>Contact us</span>
+		</h3>
+		<ul>
+			<stl:channels channelName='联系我们' scope='children'>
+                <stl:if testType="UpChannelOrSelf">
+                    <stl:yes>
+                        <li class="erji_position_li1">
+                            <stl:a></stl:a>
+                        </li>
+                    </stl:yes>
+                    <stl:no>
+                        <li>
+                            <stl:a></stl:a>
+                        </li>
+                    </stl:no>
+                </stl:if>
+            </stl:channels>
+
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<!--公司地址-->
+	<div class="erji_map kuandu">
+		<div class="erji_map_t">
+			<!--百度地图容器-->
+			<ul>
+				<li id="tab1" class="tab_con" style="display:block;">
+					<div style="height:450px;" id="dituContent"></div>
+				</li>
+			</ul>
+		</div>
+		<div class="erji_map_b">
+			<ul class="tabs" id="tabs">
+				<li class="erji_map_b_li1">
+					<a tab="tab1">
+						<h3>长沙岱勒新材料科技股份有限公司</h3>
+						<p>长沙高新开发区环联路108号</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		$(function () {
+			$(".erji_map_b ul li").hover(function () {
+				var index = $(this).index();
+				$(this).addClass("on").siblings().removeClass("on");
+				$(".erji_map_t ul li").eq(index).css("display", "block").siblings().css("display", "none");
+			})
+		})
+	</script>
+	<!--foot-->
+	<stl:include file="/include/footer.html"></stl:include>
+	<!--地图-->
+	<script type="text/javascript">
+		//创建和初始化地图函数：
+		function initMap() {
+			createMap();//创建地图
+			setMapEvent();//设置地图事件
+			addMapControl();//向地图添加控件
+			addMarker();//向地图中添加marker
+		}
+
+		//创建地图函数：
+		function createMap() {
+			var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+			var point = new BMap.Point(112.846431, 28.240719);//定义一个中心点坐标
+			map.centerAndZoom(point, 18);//设定地图的中心点和坐标并将地图显示在地图容器中
+			window.map = map;//将map变量存储在全局
+		}
+
+		//地图事件设置函数：
+		function setMapEvent() {
+			map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+			//map.enableScrollWheelZoom();启用地图滚轮放大缩小
+			map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+			map.enableKeyboard();//启用键盘上下左右键移动地图
+		}
+
+		//地图控件添加函数：
+		function addMapControl() {
+			//向地图中添加缩放控件
+			var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+			map.addControl(ctrl_nav);
+			//向地图中添加缩略图控件
+			var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
+			map.addControl(ctrl_ove);
+			//向地图中添加比例尺控件
+			var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+			map.addControl(ctrl_sca);
+		}
+
+		//标注点数组
+		var markerArr = [{ title: "长沙岱勒新材料科技股份有限公司", content: "长沙高新开发区环联路108号", point: "112.846431|28.240719", isOpen: 1, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
+		];
+		//创建marker
+		function addMarker() {
+			for (var i = 0; i < markerArr.length; i++) {
+				var json = markerArr[i];
+				var p0 = json.point.split("|")[0];
+				var p1 = json.point.split("|")[1];
+				var point = new BMap.Point(p0, p1);
+				var iconImg = createIcon(json.icon);
+				var marker = new BMap.Marker(point, { icon: iconImg });
+				var iw = createInfoWindow(i);
+				var label = new BMap.Label(json.title, { "offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20) });
+				marker.setLabel(label);
+				map.addOverlay(marker);
+				label.setStyle({
+					borderColor: "#808080",
+					color: "#333",
+					cursor: "pointer"
+				});
+
+				(function () {
+					var index = i;
+					var _iw = createInfoWindow(i);
+					var _marker = marker;
+					_marker.addEventListener("click", function () {
+						this.openInfoWindow(_iw);
+					});
+					_iw.addEventListener("open", function () {
+						_marker.getLabel().hide();
+					})
+					_iw.addEventListener("close", function () {
+						_marker.getLabel().show();
+					})
+					label.addEventListener("click", function () {
+						_marker.openInfoWindow(_iw);
+					})
+					if (!!json.isOpen) {
+						label.hide();
+						_marker.openInfoWindow(_iw);
+					}
+				})()
+			}
+		}
+		//创建InfoWindow
+		function createInfoWindow(i) {
+			var json = markerArr[i];
+			var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
+			return iw;
+		}
+		//创建一个Icon
+		function createIcon(json) {
+			var icon = new BMap.Icon("{Stl.SiteUrl}/images/home_map_tb.png", new BMap.Size(json.w, json.h), { imageOffset: new BMap.Size(-json.l, -json.t), infoWindowOffset: new BMap.Size(json.lb + 5, 1), offset: new BMap.Size(json.x, json.h) })
+			return icon;
+		}
+
+		initMap();//创建和初始化地图
+	</script>
+
+</body>
+
+</html>

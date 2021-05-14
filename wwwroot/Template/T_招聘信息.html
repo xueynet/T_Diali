@@ -1,134 +1,14 @@
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<stl:include file="/include/meta.html"></stl:include>
-	<link href="{Stl.SiteUrl}/css/css.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="{Stl.SiteUrl}/js/jquery-1.8.2.min.js"></script>
-	<script type="text/javascript" src="{Stl.SiteUrl}/js/qiehuan.js"></script>
-	<!--人力资源-->
-	<script type="text/javascript" src="{Stl.SiteUrl}/js/menu.js"></script>
-
-	<link rel="stylesheet" href="{Stl.SiteUrl}/css/simpleAlert.css">
-	<script src="{Stl.SiteUrl}/js/simpleAlert.js"></script>
-	<!-- <script src="{Stl.SiteUrl}/js/zhaoping.js"></script> -->
-</head>
-
-<body>
-	<link rel='stylesheet' href='{Stl.SiteUrl}/css/font-awesome.min.css' type='text/css'>
-	<!--搜索-->
-	<!-- 引入头部 -->
-	<stl:include file="/include/header.html"></stl:include>
-	<!--wap导航-->
-
-	<script type="text/javascript" src="{Stl.SiteUrl}/js/sidenav.min.js"></script>
-	<script>$('[data-sidenav]').sidenav();</script>
-	<!--二级开始-->
-	<div class="erji_banner">
-		<stl:image channelName="人力资源"></stl:image>
-	</div>
-	<!--当前位置-->
-	<div class="erji_position">
-		<h3>
-			<p>人力资源</p><span>Human resources</span>
-		</h3>
-		<ul>
-			<stl:channels channelName='人力资源' scope='children'>
-                <stl:if testType="UpChannelOrSelf">
-                    <stl:yes>
-                        <li class="erji_position_li1">
-                            <stl:content type="Title"></stl:content>
-                        </li>
-                    </stl:yes>
-                    <stl:no>
-                        <li>
-                            
-                        </li>
-                    </stl:no>
-                </stl:if>
-            </stl:channels>
-
-		</ul>
-		<div class="clear"></div>
-	</div>
-	<div class="erji_rlzy kuandu">
-		<div class="erji_zizhi_box">
-			<ul class="tabs" id="tabs">
-				<li><a tab="tab1">社会招聘</a></li>
-				<li><a tab="tab2">校园招聘</a></li>
-				<div class="clear"></div>
-			</ul>
-		</div>
-		<div class="erji_rlzy_nr">
-			<ul>
-				<li id="tab1" class="tab_con">
-					<div class="erji_rlzy_t">
-						<span>职位名称</span>
-						<span>工作地点</span>
-						<span>招聘人数</span>
-						<span>招聘截止时间</span>
-						<span>职位申请</span>
-					</div>
-					<!--内容-->
-					<div class="menu_list">
-						<ul>
-							<stl:contents channelName='社会招聘'>
-								<li>
-									<p class="fuMenu">
-										<span>{content.Title}</span>
-										<span>长沙</span>
-										<span>{content.Summary}</span>
-										<span></span>
-										<span class="shengqing_span">申请</span>
-									</p>
-									<img class="xiala" src="{Stl.SiteUrl}/images/xiala.png"/>
-									<div class="div1">
-										<div class="rlzy_info_con">{content.Body}</div>
-									</div>
-								</li>
-							</stl:contents>
-						</ul>
-					</div>
-					<!--内容-->
-				</li>
-				<li id="tab2" class="tab_con">
-					<div class="erji_rlzy_t">
-						<span>职位名称</span>
-						<span>工作地点</span>
-						<span>招聘人数</span>
-						<span>招聘截止时间</span>
-						<span>职位申请</span>
-					</div>
-					<!--内容-->
-					<div class="menu_list">
-						<ul>
-							<stl:contents channelName='校园招聘'>
-								<li>
-									<p class="fuMenu">
-										<span>{content.Title}</span>
-										<span>长沙</span>
-										<span>{content.Summary}</span>
-										<span></span>
-										<span class="shengqing_span">申请</span>
-									</p>
-									<img class="xiala" src="{Stl.SiteUrl}/images/xiala.png"/>
-									<div class="div1">
-										<div class="rlzy_info_con">{content.Body}</div>
-									</div>
-								</li>
-							</stl:contents>
-						</ul>
-					</div>
-					<!--内容-->
-				</li>
-
-			</ul>
-		</div>
-	</div>
-	<!-- 引入底部 -->
-	<stl:include file="/include/footer.html"></stl:include>
-	
-</body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+  </head>
+  <body></body>
 </html>

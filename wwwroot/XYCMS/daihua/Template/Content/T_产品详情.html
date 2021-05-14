@@ -1,0 +1,74 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<stl:include file="/include/meta.html"></stl:include>
+	<link href="{Stl.SiteUrl}/css/css.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/jquery-1.8.2.min.js"></script>
+
+</head>
+
+<body>
+	<!-- <script type="text/javascript">
+        $(function() {
+            $("#table1 a").each(function(index) {
+				console.log(index);
+				debugger;
+				$(this).click(function() {
+                    $("a.active").removeClass("active"); //注意这里
+                    $(this).addClass("active"); //注意这里
+				});
+
+            });
+        });
+    </script> -->
+	<link rel='stylesheet' href='{Stl.SiteUrl}/css/font-awesome.min.css' type='text/css'>
+	<!--搜索-->
+	<stl:include file="/include/header.html"></stl:include>
+	<!--wap导航-->
+
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/sidenav.min.js"></script>
+	<script>$('[data-sidenav]').sidenav();</script>
+	<!--二级开始-->
+	<div class="erji_banner">
+		<stl:channel channelName='产品中心' type='imageUrl'>
+			<stl:image></stl:image>
+		</stl:channel>
+	</div>
+	<!-- <div class="erji_banner" style="background:url(/skin/banner/3.jpg) no-repeat center;"></div> -->
+	<!--当前位置-->
+	<div class="erji_position">
+		<h3>
+			<p>产品中心</p><span>Product Center</span>
+		</h3>
+		<ul>
+			<stl:channels channelName='产品中心' scope='children'>
+				<stl:if testType="UpChannelOrSelf">
+					<stl:yes>
+						<li class="erji_position_li1">
+							<stl:a></stl:a>
+						</li>
+					</stl:yes>
+					<stl:no>
+						<li>
+							<stl:a></stl:a>
+						</li>
+					</stl:no>
+				</stl:if>
+			</stl:channels>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="erji_products_xq_top kuandu">
+		<span>{content.Title}</span>
+	</div>
+	<div class="erji_products_xq kuandu">
+		{content.Body}
+	</div>
+	<!--foot-->
+	<stl:include file="/include/footer.html"></stl:include>
+</body>
+</html>
+

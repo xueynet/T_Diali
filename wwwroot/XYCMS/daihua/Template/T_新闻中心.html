@@ -1,0 +1,108 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<stl:include file="/include/meta.html"></stl:include>
+	<link href="{Stl.SiteUrl}/css/css.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/jquery-1.8.2.min.js"></script>
+
+</head>
+
+<body>
+	<link rel='stylesheet' href='{Stl.SiteUrl}/css/font-awesome.min.css' type='text/css'>
+	<!--搜索-->
+	<!-- 引入头部开始-->
+	<stl:include file="/include/header.html"></stl:include>
+	<!--引入头部结束 -->
+	<!--wap导航-->
+
+	<script type="text/javascript" src="{Stl.SiteUrl}/js/sidenav.min.js"></script>
+	<script>$('[data-sidenav]').sidenav();</script>
+	<!--二级开始-->
+	<div class="erji_banner">
+		<stl:image channelName="新闻中心"></stl:image>
+	</div>
+	<!--当前位置-->
+	<div class="erji_position">
+		<h3>
+			<p>新闻中心</p><span>News Center</span>
+		</h3>
+		<ul>
+			<stl:channels channelName='新闻中心' scope='children'>
+				<stl:if testType="UpChannelOrSelf">
+					<stl:yes>
+						<li class="erji_position_li1"><stl:a></stl:a></li>
+					</stl:yes>
+					<stl:no>
+						<li><stl:a></stl:a></li>
+					</stl:no>
+				</stl:if>
+			</stl:channels>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="erji_news kuandu">
+		<stl:pageContents scope="_self" pageNum="6">
+			<dl>
+				<dt>
+					<stl:a target="_blank">
+						<img src="{content.ImageUrl}" />
+					</stl:a>
+				</dt>
+				<dd>
+					<stl:a target="_blank">
+						<h3>{content.Title}</h3>
+						<p>{content.Summary}</p>
+						<span><stl:content type="AddDate" formatString="yyyy-MM-dd"></stl:content></span>
+					</st:a>
+				</dd>
+			</dl>
+		</stl:pageContents>
+		
+		<div class="clear"></div>
+
+		<div class="erji_page">
+			<ul>
+				<stl:pageItem type="PreviousPage">
+					<stl:yes>
+						<li>
+							<a href="{Current.Url}" class="prev">上一页</a>
+						</li>
+					</stl:yes>
+				</stl:pageItem>
+				<stl:pageItem type="PageNavigation" listNum="3">
+					<stl:yes>
+						<li>
+							<a href="{Current.Url}">{Current.Num}</a>
+						</li>
+					</stl:yes>
+					<stl:no>
+						<li class="thisclass">
+							<a href="javascript:;">{Current.Num}</a>
+						</div>
+					</stl:no>
+				</stl:pageItem>
+				<stl:pageItem type="NextPage">
+					<stl:yes>
+						<li>
+							<a href="{Current.Url}" class="next">下一页</a>
+						</li>
+					</stl:yes>
+					<stl:no>
+						<li>
+							<a href="javascript:;" class="next">下一页</a>
+						</li>
+					</stl:no>
+				</stl:pageItem>
+			</ul>
+		</div>
+	</div>
+	<!--foot-->
+
+	<stl:include file="/include/footer.html"></stl:include>
+
+</body>
+
+</html>
