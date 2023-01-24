@@ -2,6 +2,7 @@
 .vscode/
 node_modules/
 wwwroot/xy-admin/
+wwwroot/XYCMS/daihua/upload/
 wwwroot/home/
 wwwroot/sitefiles/
 wwwroot/sitefiles/assets/
